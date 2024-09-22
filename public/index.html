@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>瞬間英作文トレーニング</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+
+<body>
+    <div class="container">
+        <h1>瞬間英作文トレーニング</h1>
+        <input type="file" id="fileInput" accept=".csv">
+        <!-- 開始ボタンを追加 -->
+        <button id="startButton" disabled>開始</button>
+        <div id="sentenceArea">
+            <p id="japaneseSentence"></p>
+            <p id="englishSentence"></p>
+        </div>
+        <div id="controls">
+            <button id="prevButton">前へ</button>
+            <button id="pauseButton">一時停止</button> <!-- 追加 -->
+            <button id="nextButton">次へ</button>
+        </div>
+        <!-- 進捗状況の表示（オプション） -->
+        <div id="progress">
+            <span id="currentIndex">0</span> / <span id="totalCount">0</span>
+        </div>
+    </div>
+    <!-- フッターを追加 -->
+    <footer>
+        <p>&copy; you1dan</p>
+    </footer>
+    <script src="app.js?v=11"></script>
+</body>
+
+</html>

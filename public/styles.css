@@ -1,0 +1,126 @@
+/* ベーススタイル */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    /* フッターの高さ分、下部にパディングを追加 */
+    padding-bottom: 50px; /* フッターの高さに合わせて調整 */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ヘッダー */
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* ファイル入力と開始ボタン */
+#fileInput {
+    display: block;
+    margin: 0 auto 10px auto;
+    font-size: 1em;
+}
+
+/* ボタンのスタイル */
+#startButton,
+#controls button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+#startButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 80px;
+}
+
+#startButton[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#startButton:hover:enabled,
+#controls button:hover {
+    background-color: #0056b3;
+}
+
+/* 文章表示エリア */
+#sentenceArea {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    min-height: 200px; /* 高さを固定してレイアウトの揺れを防ぐ */
+}
+
+#sentenceArea p {
+    font-size: 1.5em;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+/* 英文のスタイル */
+#englishSentence {
+    display: none;
+    color: #007BFF;
+}
+
+/* 操作ボタン */
+#controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* 進捗表示 */
+#progress {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    #sentenceArea p {
+        font-size: 1em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    #controls button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+        margin: 5px;
+    }
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.9em;
+    color: #666;
+}
